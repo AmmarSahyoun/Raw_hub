@@ -1,0 +1,22 @@
+source_system: JSONplaceholder
+authentication_method: api_key
+akv_secret: public_api_key
+base_url: https://jsonplaceholder.typicode.com
+api_rate_limit: 2
+
+tables:
+  - table_name: posts
+    activated: ture
+    relative_url: /workobject/posts
+    load_type: merge
+    primary_key: [postId]
+    pagination_mode: offset
+    page_size: 100
+    batch_key: value
+    incremental_column: LastModifiedDateTime
+    incremental_strategy: odata_filter
+    order_by: LastModifiedDateTime asc, postId asc
+    select_columns: [
+      postId, CreateDateTime, Category, CreatedBy, Priority, Service, Urgency, Symptom, LastModifiedDateTime
+      ]
+    text_clean_columns: [Symptom]

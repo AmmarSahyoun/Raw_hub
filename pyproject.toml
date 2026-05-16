@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python_utils"
+version = "0.1.0"
+description = "Shared Python utilities for Raw Hub Fabric notebooks"
+author = {name="Ammar Sahyoun", email="ammarzgr@hotmail.com"}
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.12.0",
+    "pandas>=2.0.0",
+    "pyarrow>=14.0.0",
+    "httpx>=0.27.0",
+    "pyyaml>=6.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["python_utils*"]
