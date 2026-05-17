@@ -1,7 +1,8 @@
 source_system: JSONplaceholder
 authentication_method: api_key
-akv_secret: public_api_key
+akv_secret: placeholder_api_key
 base_url: https://jsonplaceholder.typicode.com
+sub_source_system:
 api_rate_limit: 2
 
 tables:
